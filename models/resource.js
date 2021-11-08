@@ -4,11 +4,12 @@ const Schema = mongoose.Schema
 
 const resourceSchema = new Schema({
   resourceName: String,
-  resourceDescription: String,
   resourceLink: String,
+  resourceDescription: String,
   resourceImg: String,
-  resourceType: {type: String, enum: ['Dictionary', 'Reading','Writing','Listening','Speaking/Pronunciation','Grammar']},
-  associatedLanguage: [{type: Schema.Types.ObjectId, ref: 'Language'}],
+  resourceType: {type: String, enum: ['Dictionary','Reading','Writing','Listening','Speaking/Pronunciation','Grammar']},
+  // associatedLanguage: [{type: Schema.Types.ObjectId, ref: 'Language'}],
+  associatedLanguage: String,
   resourceCreatedBy:[{type: Schema.Types.ObjectId, ref: 'Profile'}]
 })
 

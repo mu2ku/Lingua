@@ -45,3 +45,8 @@ nav {
   font-size: 30px;
   margin: 10px 50px;
 }
+
+.new-resource > form {
+  display:inline-flex;
+  flex-direction:column;
+}
