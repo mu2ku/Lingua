@@ -3,7 +3,7 @@ import { Language } from "../models/language.js"
 function index(req,res){
   Language.find({})
   .then(languages => 
-    res.render('languages/index',{
+    res.render('langauges/index',{
       title: "Language List",
       languages
   })
@@ -15,7 +15,7 @@ function create(req,res){
 }
 
 function newLanguage(req,res){
-  res.render('languages/new', {
+  res.render('langauges/new', {
     title: 'Add Language'
   })
 }
