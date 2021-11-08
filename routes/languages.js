@@ -3,7 +3,7 @@ import * as langCtrl from '../controllers/languages.js'
 const router = Router()
 
 router.get('/', langCtrl.index)
-router.get('/new',langCtrl.new)
+router.post('/',langCtrl.create)
 
 export {
   router

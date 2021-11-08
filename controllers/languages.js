@@ -3,20 +3,20 @@ import { Language } from "../models/language.js"
 function index(req,res){
   Language.find({})
   .then(languages => 
-    res.render('langauges/index',{
+    res.render('langauges/index', {
       title: "Language List",
       languages
   })
 )}
 
-
 function create(req,res){
-  
-}
-
-function newLanguage(req,res){
-  res.render('langauges/new', {
-    title: 'Add Language'
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  const language = new Language(req.body)
+  language.save(function (err) {
+    if (err) return res.redirect('/languages')
+    res.redirect('/languages')
   })
 }
 
@@ -30,8 +30,6 @@ function show(req,res){
 
 export{
   index,
-  show,
   create,
-  newLanguage as new,
   deleteLanguage as delete,
 }
