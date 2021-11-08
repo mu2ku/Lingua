@@ -44,9 +44,15 @@ h1 {
 }
 
 .new-language{
-  display:flex;
+  display:inline-flex;
   justify-content: flex-end;
-  padding: 30px 10px;
-  margin: 0 400px;
   font-size:20px;
+  margin: 0 100px;
+}
+
+.language-list {
+  display:inline-flex;
+  flex-direction: column;
+  font-size: 30px;
+  margin: 10px 50px;
 }
