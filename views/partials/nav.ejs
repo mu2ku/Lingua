@@ -5,9 +5,13 @@
 <body>
   <nav>
     <% if (user) { %>
+      <h1>Lingua</h1>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
+      <a href="/">Home</a>
+      <a href="/profile">Profile</a>
+      <a href="/languages">Browse Languages</a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
