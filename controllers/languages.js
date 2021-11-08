@@ -5,7 +5,8 @@ function index(req,res){
   .then(languages => 
     res.render('langauges/index', {
       title: "Language List",
-      languages
+      languages,
+      user: req.user ? req.user : null
   })
 )}
 

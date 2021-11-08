@@ -29,16 +29,19 @@ nav {
   background-color:lavender;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.new-language{
+  display:inline-flex;
+  justify-content: flex-end;
+  font-size:20px;
+  margin: 0 100px;
+}
+
+.language-list {
+  display:inline-flex;
   flex-direction: column;
-}
-
-h1 {
-  font-size: 3.6rem;
+  font-size: 30px;
+  margin: 10px 50px;
 }
