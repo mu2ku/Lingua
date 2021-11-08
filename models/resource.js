@@ -7,7 +7,7 @@ const resourceSchema = new Schema({
   resourceLink: String,
   resourceDescription: String,
   resourceImg: String,
-  resourceType: {type: String, enum: ['Dictionary','Reading','Writing','Listening','Speaking/Pronunciation','Grammar']},
+  resourceType: String,
   // associatedLanguage: [{type: Schema.Types.ObjectId, ref: 'Language'}],
   associatedLanguage: String,
   resourceCreatedBy:[{type: Schema.Types.ObjectId, ref: 'Profile'}]
