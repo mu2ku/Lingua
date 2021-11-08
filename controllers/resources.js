@@ -12,11 +12,11 @@ function create(req,res){
 
 }
 
-function newFlashcard(req,res){
+function newResource(req,res){
 
 }
 
-function deleteFlashcard(req,res){
+function deleteResource(req,res){
   
 }
 

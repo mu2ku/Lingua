@@ -1,4 +1,4 @@
-import { Flaschard } from "../models/flashcard.js"
+import { Flashcard } from "../models/flashcard.js"
 
 function index(req,res){
 
@@ -17,7 +17,7 @@ function newFlashcard(req,res){
 }
 
 function deleteFlashcard(req,res){
-  
+
 }
 
 export{

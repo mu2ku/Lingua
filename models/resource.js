@@ -12,6 +12,8 @@ const resourceSchema = new Schema({
   resourceCreatedBy:[{type: Schema.Types.ObjectId, ref: 'Profile'}]
 })
 
+const Resource = mongoose.model('Resource', resourceSchema)
+
 export{
   Resource
 }

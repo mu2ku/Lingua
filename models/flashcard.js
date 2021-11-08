@@ -12,5 +12,5 @@ const flashcardSchema = new Schema ({
 const Flashcard = mongoose.model('Flashcard', flashcardSchema)
 
 export {
-  Flaschard
+  Flashcard
 }
