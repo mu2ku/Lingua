@@ -41,8 +41,8 @@ function viewResources(req,res){
   Language.findById(req.params.id)
   .populate('languageResource')
   .then(language => {
-    Resource.find({})
-    .then(resources =>{
+    Resource.find({ resourceType: req.params.resourceType})
+    .then(resources => {
       res.render('langauges/viewResource', {
         resources,
         language,
