@@ -1,4 +1,5 @@
 import { Language } from "../models/language.js"
+import { Resource } from "../models/resource.js"
 
 function index(req,res){
   Language.find({})
@@ -36,8 +37,25 @@ function show(req,res){
 
 }
 
+function viewResources(req,res){
+  Language.findById(req.params.id)
+  .populate('languageResource')
+  .then(language => {
+    Resource.find({})
+    .then(resources =>{
+      res.render('langauges/viewResource', {
+        resources,
+        language,
+        user: req.user ? req.user : null,
+        title: 'Language Resource'
+      })
+    })
+  })
+}
+
 export{
   index,
   create,
   deleteLanguage as delete,
+  viewResources
 }
