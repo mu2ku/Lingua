@@ -1,24 +1,24 @@
 import { Profile } from "../models/profile.js"
 
-function index(req,res){
-
-}
-
-function create(req,res){
-
-}
-
-function newProfile(req,res){
- 
-}
-
-function deleteProfile(req,res){
-  
+function show(req,res){
+  Profile.findById(req.params.id)
+  .then(profile =>{
+    Profile.findById(req.user.profile)
+    .then(userProfile => {
+      res.render('profiles/show',{
+        title: 'Title',
+        profile,
+        userProfile,
+        user: req.user ? req.user : null,
+      })
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 export{
-  index,
-  create,
-  newProfile as new,
-  deleteProfile as delete,
+  show
 }

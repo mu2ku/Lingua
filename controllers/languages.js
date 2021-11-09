@@ -22,7 +22,14 @@ function create(req,res){
 }
 
 function deleteLanguage(req,res){
-  
+  Language.findByIdAndDelete(req.params.id)
+  .then(()=> {
+    res.redirect('/languages')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function show(req,res){

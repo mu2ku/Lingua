@@ -7,14 +7,17 @@
     <h2>Language List</h2>
     <ul>
      <% languages.forEach((language)=> { %>
-        <li><%= language.languageName %>
+      <li><%= language.languageName %>
+        <form action="/languages/<%= language._id %>?_method=DELETE" method="POST">
+          <button type-"submit" class="btn btn-lg btn-danger">X</button>
+        </form> 
           <ul>
-            <a href="/languages/<%= language._id %>/dictionary"><li id="<%= language.languageName %>_dictionary" class="link">Dictionary</li></a>
-            <a href="/languages/<%= language._id %>/grammar"><li id="<%= language.languageName %>_grammar" class="link">Grammar</li></a>
-            <a href="/languages/<%= language._id %>/reading"><li id="<%= language.languageName %>_reading" class="link">Reading</li></a>
-            <a href="/languages/<%= language._id %>/writing"><li id="<%= language.languageName %>_writing" class="link">Writing</li></a>
-            <a href="/languages/<%= language._id %>/speaking"><li id="<%= language.languageName %>_speaking" class="link">Speaking</li></a>
-            <a href="/languages/<%= language._id %>/listening"><li id="<%= language.languageName %>_listening" class="link">Listening</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_dictionary" class="link">Dictionary</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_grammar" class="link">Grammar</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_reading" class="link">Reading</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_writing" class="link">Writing</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_speaking" class="link">Speaking</li></a>
+            <a href="/languages/<%= language._id %>"><li id="<%= language.languageName %>_listening" class="link">Listening</li></a>
           </ul>
         </li>
       <% }) %>

@@ -1,6 +1,12 @@
 import { Resource } from "../models/resource.js"
+import { Language } from '../models/language.js'
+import { Profile } from '../models/profile.js'
 
 function index(req,res){
+
+}
+
+function show(req,res){
 
 }
 
@@ -28,6 +34,7 @@ function deleteResource(req,res){
 
 export{
   index,
+  show,
   create,
   newResource as new,
   deleteResource as delete,

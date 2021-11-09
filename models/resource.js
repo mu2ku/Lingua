@@ -8,7 +8,6 @@ const resourceSchema = new Schema({
   resourceDescription: String,
   resourceImg: String,
   resourceType: String,
-  // associatedLanguage: [{type: Schema.Types.ObjectId, ref: 'Language'}],
   associatedLanguage: String,
   resourceCreatedBy:[{type: Schema.Types.ObjectId, ref: 'Profile'}]
 })
