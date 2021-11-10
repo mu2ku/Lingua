@@ -47,10 +47,14 @@ function viewResources(req,res){
         resources,
         language,
         user: req.user ? req.user : null,
-        title: 'Language Resource'
+        title: 'Language Resource',
       })
     })
   })
+}
+
+function addtoCollection(req,res){
+  Resource.findById(req.params.id)
 }
 
 export{

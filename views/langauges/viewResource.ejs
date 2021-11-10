@@ -15,5 +15,43 @@
     </div>
   </div>
 <% }) %>
+
+<%# This is where we'll display a button to add/remove the game from your collection %> 
+<% if (!userHasResource) { %>
+  <form 
+    action="/games/<%= apiResult.id %>/addToCollection?_method=PATCH" 
+    method="POST"
+  >
+    <input type="text" name="name" hidden value="<%= apiResult.name %>">
+    <input type="text" name="rawgId" hidden value="<%= apiResult.id %>">
+    <input 
+      type="text" 
+      name="imageUrl" 
+      hidden 
+      value="<%= apiResult.background_image %>"
+    >
+    <input 
+      type="text" 
+      name="released" 
+      hidden 
+      value="<%= apiResult.released %>"
+    >
+    <button class="btn btn-primary">
+      Add To Collection
+    </button> 
+  </form>
+<% } %>
+<% if (userHasGame) { %>
+  <form 
+    class="text-center" 
+    action="/games/<%= apiResult.id %>/removeFromCollection?_method=PATCH" 
+    method="POST"
+  >
+    <button class="btn btn-danger">
+      Remove From Collection
+    </button>
+  </form>
+<% } %>
+
 </main>
 <%- include('../partials/footer') %>
