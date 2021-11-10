@@ -6,6 +6,7 @@ router.get('/', langCtrl.index)
 router.post('/',langCtrl.create)
 router.delete('/:id', langCtrl.delete)
 router.get('/:id/resources/:resourceType', langCtrl.viewResources)
+router.delete('/:id/resources/:resourceType/:resourceId', langCtrl.deleteResource)
 
 
 export {

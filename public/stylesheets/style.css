@@ -50,3 +50,7 @@ nav {
   display:inline-flex;
   flex-direction:column;
 }
+
+.delete-resource {
+  display: inline;
+}

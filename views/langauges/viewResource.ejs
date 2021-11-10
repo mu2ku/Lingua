@@ -10,48 +10,13 @@
         <a href="<%= resource.resourceLink %>"><h5 class="card-name"><%= resource.resourceName %></h5></a>
         <!-- <h5 class="card-image"><%= resource.resourceImg %></h5> -->
         <p class="card-description"><%= resource.resourceDescription %></p>
-        <button type="submit" class="btn btn-lg btn-info">Like</button>
+        <button type="submit" class="btn btn-lg btn-info">Like</button> 
+        <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=DELETE" class="delete-resource" method="POST">
+          <button type="submit" class="btn btn-lg btn-danger">Delete</button>
+        </form>
       </div>
     </div>
   </div>
 <% }) %>
-
-<%# This is where we'll display a button to add/remove the game from your collection %> 
-<% if (!userHasResource) { %>
-  <form 
-    action="/games/<%= apiResult.id %>/addToCollection?_method=PATCH" 
-    method="POST"
-  >
-    <input type="text" name="name" hidden value="<%= apiResult.name %>">
-    <input type="text" name="rawgId" hidden value="<%= apiResult.id %>">
-    <input 
-      type="text" 
-      name="imageUrl" 
-      hidden 
-      value="<%= apiResult.background_image %>"
-    >
-    <input 
-      type="text" 
-      name="released" 
-      hidden 
-      value="<%= apiResult.released %>"
-    >
-    <button class="btn btn-primary">
-      Add To Collection
-    </button> 
-  </form>
-<% } %>
-<% if (userHasGame) { %>
-  <form 
-    class="text-center" 
-    action="/games/<%= apiResult.id %>/removeFromCollection?_method=PATCH" 
-    method="POST"
-  >
-    <button class="btn btn-danger">
-      Remove From Collection
-    </button>
-  </form>
-<% } %>
-
 </main>
 <%- include('../partials/footer') %>

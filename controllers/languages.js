@@ -53,13 +53,17 @@ function viewResources(req,res){
   })
 }
 
-function addtoCollection(req,res){
-  Resource.findById(req.params.id)
+function deleteResource(req,res){
+  Resource.findByIdAndDelete(req.params.resourceId)
+  .then(() => {
+    res.redirect('back')
+  })
 }
 
 export{
   index,
   create,
   deleteLanguage as delete,
-  viewResources
+  viewResources,
+  deleteResource
 }
