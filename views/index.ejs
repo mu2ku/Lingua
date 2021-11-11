@@ -3,6 +3,7 @@
 <%- include('./partials/nav') %>
 
 <main class="home-page">
+  <% if (user) { %>
   <h1>Latest Resource Additions</h1>
   <div class="latestResources">
     <% resources.forEach(resource => { %>
@@ -24,6 +25,7 @@
     <img src="/images/third.png" alt="third place">
     <img src="/images/placeholder.png" alt="placeholder">
   </div>
+  <% } %>
 </main>
 
 <%- include('./partials/footer') %>
