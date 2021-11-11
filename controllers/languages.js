@@ -103,6 +103,26 @@ function removeFromCollection(req,res){
   })
 }
 
+function edit(req,res){
+  Language.findById(req.params.id)
+  .populate('languageResource')
+  .then(language => {
+    Resource.findById(req.params.resourceId)
+    .then(resource => {
+      res.render('langauges/edit', {
+        language,
+        resource,
+        title: 'Edit Resource',
+        user: req.user ? req.user : null
+      })
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export{
   index,
   create,
@@ -110,5 +130,6 @@ export{
   viewResources,
   deleteResource,
   addToCollection,
-  removeFromCollection
+  removeFromCollection,
+  edit
 }

@@ -24,6 +24,8 @@
         <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=DELETE" class="delete-resource" method="POST">
           <button type="submit" class="btn btn-lg btn-danger">Delete</button>
         </form>
+        <% //Edit resource button %>
+        <a href="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/edit"><button type="submit" class="btn btn-lg btn-success">Edit Resource</button></a>
       </div>
     </div>
   </div>

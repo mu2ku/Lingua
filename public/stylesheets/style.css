@@ -59,6 +59,11 @@ p {
   flex-direction:column;
 }
 
+.edit-resource > form {
+  display:inline-flex;
+  flex-direction:column;
+}
+
 .patch-resource, .delete-resource {
   display: inline;
 }

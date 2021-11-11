@@ -2,13 +2,6 @@ import { Resource } from "../models/resource.js"
 import { Language } from '../models/language.js'
 import { Profile } from '../models/profile.js'
 
-function index(req,res){
-
-}
-
-function show(req,res){
-
-}
 
 function create(req,res){
   for (let key in req.body) {
@@ -28,14 +21,22 @@ function newResource(req,res){
   })
 }
 
-function deleteResource(req,res){
-  
-}
+// function update(req,res){
+//   Resource.findByIdAndUpdate(req.params.id, req.body)
+//   .populate('languageId')
+//   .then( resource => {
+//     Language.find({ languageName: req.params.associatedLanguage })
+//     .then(language => {
+//       res.redirect('/languages')
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
 
 export{
-  index,
-  show,
   create,
   newResource as new,
-  deleteResource as delete,
 }
