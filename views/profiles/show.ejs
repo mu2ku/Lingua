@@ -1,18 +1,23 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main>
+<main class="profile-body">
   <div class="userInfo">
     <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
     <h1><%= profile.name %></h1>
     <h1><%= user.email %></h1>
     <p></p>
   </div>
+
   <div class="collectedResources">
-    <ul>
-      <% resources.forEach(resource => { %>
-        <li><%= resource.resourceName %></li>
-      <% }) %>
-    </ul>
+    <% resources.forEach(resource => { %>
+      <div class="card text-white bg-dark mb-3" style="max-width: 130rem;">
+        <div class="card-header"><h3><%= resource.resourceName %></h3></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= resource.resourceType %></h5>
+          <p class="card-text"><%= resource.resourceDescription %></p>
+        </div>
+      </div>
+    <% }) %>
   </div>
 </main>
 <%- include('../partials/footer') %>

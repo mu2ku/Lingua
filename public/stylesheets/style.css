@@ -32,6 +32,10 @@ nav {
   justify-content: space-around;
 }
 
+.profile-body{
+  display:flex;
+}
+
 .new-language{
   display:inline-flex;
   justify-content: flex-end;
@@ -57,4 +61,12 @@ nav {
 
 .delete-lang {
   display: inline;
+}
+
+.latestResources, .collectedResources {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-around;
 }

@@ -7,7 +7,7 @@ function show(req,res){
   .then(profile => {
     Profile.findById(req.user.profile)
     .then(userProfile => {
-      Resource.find({ collectedBy: req.user.profile._id })
+      Resource.find({ collectedBy: req.user.profile._id }).limit(10)
       .then(resources => {
         res.render('profiles/show',{
           title: 'Title',

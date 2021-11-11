@@ -4,6 +4,17 @@
 
 <main>
   <h1>Latest Resource Additions</h1>
+  <div class="latestResources">
+    <% resources.forEach(resource => { %>
+      <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+        <div class="card-header"><h3><%= resource.resourceName %></h3></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= resource.resourceType %></h5>
+          <p class="card-text"><%= resource.resourceDescription %></p>
+        </div>
+      </div>
+    <% }) %>
+  </div>
   <h1>Scoreboards</h1>
 </main>
 
