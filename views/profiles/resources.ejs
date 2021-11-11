@@ -1,16 +1,9 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main class="profile-body">
-  <div class="userInfo">
-    <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
-    <h1><%= profile.name %></h1>
-    <h1><%= user.email %></h1>
-    <p></p>
-  </div>
-  <!-- <h1>Resources Liked:</h1> -->
+<main>
   <div class="collectedResources">
     <% resources.forEach(resource => { %>
-      <div class="card text-dark bg-light mb-3" style="max-width: 130rem;">
+      <div class="card text-dark bg-light mb-3" style="max-width: 150rem;">
         <div class="card-header"><a href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
         <div class="card-body">
           <h4 class="card-text"><%= resource.resourceDescription %></h4>
@@ -19,6 +12,6 @@
       </div>
     <% }) %>
   </div>
-  <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>/resources">Show All</a></div>
+  <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>">Go Back</a></div>
 </main>
 <%- include('../partials/footer') %>

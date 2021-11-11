@@ -82,7 +82,7 @@ p {
 
 .collectedResources {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   flex-flow: row;
   margin: 0 60px;
 }

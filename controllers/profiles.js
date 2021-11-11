@@ -7,9 +7,33 @@ function show(req,res){
   .then(profile => {
     Profile.findById(req.user.profile)
     .then(userProfile => {
-      Resource.find({ collectedBy: req.user.profile._id }).limit(10)
+      Resource.find({ collectedBy: req.user.profile._id }).limit(4)
       .then(resources => {
         res.render('profiles/show',{
+          title: 'Profile',
+          profile,
+          userProfile,
+          user: req.user ? req.user : null,
+          resources
+        })
+      })
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function showFavorites(req,res){
+  Profile.findById(req.params.id)
+  .populate('collectedResources')
+  .then(profile => {
+    Profile.findById(req.user.profile)
+    .then(userProfile => {
+      Resource.find({ collectedBy: req.user.profile._id })
+      .then(resources => {
+        res.render('profiles/resources', {
           title: 'Title',
           profile,
           userProfile,
@@ -26,5 +50,6 @@ function show(req,res){
 }
 
 export{
-  show
+  show,
+  showFavorites
 }
