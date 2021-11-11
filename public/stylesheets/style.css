@@ -32,6 +32,10 @@ nav {
   justify-content: space-around;
 }
 
+p {
+  font-size: 12px;
+}
+
 .profile-body{
   display:flex;
 }
@@ -63,10 +67,22 @@ nav {
   display: inline;
 }
 
-.latestResources, .collectedResources {
+.latestResources {
   display: flex;
   margin: 20px;
   padding: 10px;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.collectedResources {
+  display: flex;
+  flex-wrap:wrap;
+  flex-flow: row;
+  margin: 0 60px;
+}
+
+.collectedResources > .card {
+  padding: 10px;
+  margin:20px;
 }
