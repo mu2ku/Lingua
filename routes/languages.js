@@ -10,6 +10,7 @@ router.delete('/:id/resources/:resourceType/:resourceId', langCtrl.deleteResourc
 router.patch('/:id/resources/:resourceType/:resourceId/addToCollection', langCtrl.addToCollection)
 router.patch('/:id/resources/:resourceType/:resourceId/removeFromCollection', langCtrl.removeFromCollection)
 router.get('/:id/resources/:resourceType/:resourceId/edit', langCtrl.edit)
+router.put('/:id/resources/:resourceType/:resourceId', langCtrl.update)
 
 export {
   router

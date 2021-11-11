@@ -123,6 +123,17 @@ function edit(req,res){
   })
 }
 
+function update(req,res){
+  Language.findById(req.params.id)
+  .populate('languageResource')
+  .then(language => {
+    Resource.findByIdAndUpdate(req.params.resourceId, req.body)
+    .then(resource =>{
+      res.redirect(`/languages/${language._id}/resources/${resource.resourceType}`)
+    })
+  })
+}
+
 export{
   index,
   create,
@@ -131,5 +142,6 @@ export{
   deleteResource,
   addToCollection,
   removeFromCollection,
-  edit
+  edit,
+  update
 }

@@ -3,7 +3,7 @@
 <main>
   <div class="edit-resource">
     <h1>Edit Resource:</h1>
-    <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?method=PUT" method="POST">
+    <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=PUT" method="POST">
       <input type="text" name="resourceName" placeholder="Resource Name" value="<%= resource.resourceName %>"> 
       <input type="text" name="resourceLink" placeholder="Resource Link" value="<%= resource.resourceLink %>"> 
       <input type="text" name="resourceDescription" placeholder="Resource Description" value="<%= resource.resourceDescription %>"> 

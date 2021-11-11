@@ -1,7 +1,4 @@
 import { Resource } from "../models/resource.js"
-import { Language } from '../models/language.js'
-import { Profile } from '../models/profile.js'
-
 
 function create(req,res){
   for (let key in req.body) {
@@ -20,21 +17,6 @@ function newResource(req,res){
     user: req.user ? req.user : null
   })
 }
-
-// function update(req,res){
-//   Resource.findByIdAndUpdate(req.params.id, req.body)
-//   .populate('languageId')
-//   .then( resource => {
-//     Language.find({ languageName: req.params.associatedLanguage })
-//     .then(language => {
-//       res.redirect('/languages')
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
 
 export{
   create,
