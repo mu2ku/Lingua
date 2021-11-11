@@ -7,7 +7,7 @@ function create(req,res){
   const resource = new Resource(req.body)
   resource.save(function (err) {
     if (err) return res.redirect('/resources/new')
-    res.redirect('/resources/new')
+    res.redirect('/languages')
   })
 }
 
