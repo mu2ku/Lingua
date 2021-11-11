@@ -1,15 +1,21 @@
 import { Profile } from "../models/profile.js"
+import { Resource } from "../models/resource.js"
 
 function show(req,res){
   Profile.findById(req.params.id)
-  .then(profile =>{
+  .populate('collectedResources')
+  .then(profile => {
     Profile.findById(req.user.profile)
     .then(userProfile => {
-      res.render('profiles/show',{
-        title: 'Title',
-        profile,
-        userProfile,
-        user: req.user ? req.user : null,
+      Resource.find({ collectedBy: req.user.profile._id })
+      .then(resources => {
+        res.render('profiles/show',{
+          title: 'Title',
+          profile,
+          userProfile,
+          user: req.user ? req.user : null,
+          resources
+        })
       })
     })
   })
@@ -18,6 +24,10 @@ function show(req,res){
     res.redirect('/')
   })
 }
+
+
+
+
 
 export{
   show

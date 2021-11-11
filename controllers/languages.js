@@ -33,18 +33,12 @@ function deleteLanguage(req,res){
   })
 }
 
-function show(req,res){
-
-}
-
 function viewResources(req,res){
-  // console.log(req.user.profile._id)
   Language.findById(req.params.id)
   .populate('languageResource')
   .then(language => {
     Resource.find({ resourceType: req.params.resourceType, associatedLanguage: language.languageName})
     .then(resources => {
-      // console.log(resources)
       res.render('langauges/viewResource', {
         resources,
         userHasResource: req.user.profile._id,
@@ -54,12 +48,20 @@ function viewResources(req,res){
       })
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function deleteResource(req,res){
   Resource.findByIdAndDelete(req.params.resourceId)
   .then(() => {
     res.redirect('back')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 

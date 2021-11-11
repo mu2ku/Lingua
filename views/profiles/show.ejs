@@ -7,5 +7,12 @@
     <h1><%= user.email %></h1>
     <p></p>
   </div>
+  <div class="collectedResources">
+    <ul>
+      <% resources.forEach(resource => { %>
+        <li><%= resource.resourceName %></li>
+      <% }) %>
+    </ul>
+  </div>
 </main>
 <%- include('../partials/footer') %>
