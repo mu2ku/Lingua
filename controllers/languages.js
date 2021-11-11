@@ -11,14 +11,29 @@ function index(req,res){
   })
 )}
 
-function create(req,res){
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
-  const language = new Language(req.body)
-  language.save(function (err) {
-    if (err) return res.redirect('/languages')
-    res.redirect('/languages')
+// function create(req,res){
+//   for (let key in req.body) {
+//     if (req.body[key] === '') delete req.body[key]
+//   }
+//   const language = new Language(req.body)
+//   language.save(function (err) {
+//     if (err) return res.redirect('/languages')
+//     res.redirect('/languages')
+//   })
+// }
+
+function create(req, res){
+  Language.create(req.body)
+  .then(language => {
+    language.languageCreatedBy.push(req.user.profile._id)
+    language.save()
+    .then (() => {
+      res.redirect('back')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 

@@ -9,7 +9,7 @@ const resourceSchema = new Schema({
   resourceImg: String,
   resourceType: String,
   associatedLanguage: String,
-  // resourceCreatedBy:[{type: Schema.Types.ObjectId, ref: 'Profile'}]
+  resourceCreatedBy: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   collectedBy: [{type: Schema.Types.ObjectId, ref: 'Profile'}]
 })
 
