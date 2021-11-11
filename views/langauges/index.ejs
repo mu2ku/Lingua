@@ -7,9 +7,11 @@
     <ul>
      <% languages.forEach((language)=> { %>
       <li><%= language.languageName %>
+       <% if (user.profile._id.toString() == language.languageCreatedBy) { %>
         <form action="/languages/<%= language._id %>?_method=DELETE" method="POST">
-          <button type-"submit" class="btn btn-lg btn-danger delete-lang">X</button>
+          <button type="submit" class="btn btn-lg btn-danger delete-lang">X</button>
         </form> 
+       <% } %>
           <ul>
             <a href="/languages/<%= language._id %>/resources/Dictionary"><li id="<%= language.languageName %>_dictionary" class="link">Dictionary</li></a>
             <a href="/languages/<%= language._id %>/resources/Grammar"><li id="<%= language.languageName %>_grammar" class="link">Grammar</li></a>
