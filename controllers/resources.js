@@ -1,13 +1,17 @@
 import { Resource } from "../models/resource.js"
 
 function create(req,res){
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
-  const resource = new Resource(req.body)
-  resource.save(function (err) {
-    if (err) return res.redirect('/resources/new')
-    res.redirect('/languages')
+  Resource.create(req.body)
+  .then(resource => {
+    resource.resourceCreatedBy.push(req.user.profile._id)
+    resource.save()
+    .then(() =>{
+      res.redirect('back')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
