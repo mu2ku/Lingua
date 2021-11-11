@@ -7,7 +7,8 @@ router.post('/',langCtrl.create)
 router.delete('/:id', langCtrl.delete)
 router.get('/:id/resources/:resourceType', langCtrl.viewResources)
 router.delete('/:id/resources/:resourceType/:resourceId', langCtrl.deleteResource)
-
+router.patch('/:id/resources/:resourceType/:resourceId/addToCollection', langCtrl.addToCollection)
+router.patch('/:id/resources/:resourceType/:resourceId/removeFromCollection', langCtrl.removeFromCollection)
 
 export {
   router

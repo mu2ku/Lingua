@@ -1,5 +1,4 @@
 <%- include('../partials/html-head') %>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <%- include('../partials/nav') %>
 <main>
 
@@ -9,7 +8,7 @@
      <% languages.forEach((language)=> { %>
       <li><%= language.languageName %>
         <form action="/languages/<%= language._id %>?_method=DELETE" method="POST">
-          <button type-"submit" class="btn btn-lg btn-danger">X</button>
+          <button type-"submit" class="btn btn-lg btn-danger delete-lang">X</button>
         </form> 
           <ul>
             <a href="/languages/<%= language._id %>/resources/Dictionary"><li id="<%= language.languageName %>_dictionary" class="link">Dictionary</li></a>

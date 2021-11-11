@@ -51,6 +51,10 @@ nav {
   flex-direction:column;
 }
 
-.delete-resource {
+.patch-resource, .delete-resource {
+  display: inline;
+}
+
+.delete-lang {
   display: inline;
 }
