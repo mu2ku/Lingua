@@ -5,7 +5,7 @@
 <body>
   <nav>
     <% if (user) { %>
-      <h1 class="website-name">Lingua</h1>
+      <h1 id="website-name">Lingua</h1>
       <div class="navbar">
         <div class="nav-links">
           <a href="/">Home</a>
@@ -14,7 +14,7 @@
           <a href="/resources/new">Add New Resource</a>
         </div>
         <div class="logout-btn">
-          <a href="/auth/logout"><button type="submit">Logout</button></a>
+          <a href="/auth/logout"><button type="submit" class="btn btn-danger">Logout</button></a>
         </div>
       </div>
     <% } else { %>

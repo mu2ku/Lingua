@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main class="profile-body">
+<main class="main-body">
   <div class="userInfo">
     <img src="<%= profile.avatar %>" alt="<%= profile.name %>'s avatar">
     <h1><%= profile.name %></h1>
@@ -20,5 +20,11 @@
     <% }) %>
   </div>
   <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>/resources">Show All</a></div>
+  <!-- <h1>Flashcard Reviews</h1> -->
+  <article class="flashcards">
+    <section class="flashcard">
+      <p>Test</p>
+    </section>
+  </article>
 </main>
 <%- include('../partials/footer') %>

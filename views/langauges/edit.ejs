@@ -1,6 +1,6 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main>
+<main class="main-body">
   <div class="edit-resource">
     <h1>Edit Resource:</h1>
     <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=PUT" method="POST">
