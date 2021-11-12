@@ -1,39 +1,39 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<main class="bg-light main-body">
-<h1><%= language.languageName %></h1>
-<% resources.forEach(resource => { %>
-  <div class="card-deck">
-    <div class="card">
+<main class="main-body">
+<h1 style="font-size:50px; text-align:center; margin: 10px 0 20px 0;"><%= language.languageName %></h1>
+<div class="showLanguageResources">
+  <% resources.forEach(resource => { %>
+    <div class="card text-dark bg-light mb-3" style="max-width: 130rem;">
+      <div class="card-header"><a target="_blank" rel="noopener noreferrer" href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
       <div class="card-body">
-        <a href="<%= resource.resourceLink %>"><h5 class="card-name"><%= resource.resourceName %></h5></a>
-        <!-- <h5 class="card-image"><%= resource.resourceImg %></h5> -->
-        <p class="card-description"><%= resource.resourceDescription %></p>
-        <% if (!resource.collectedBy.some(function(profile){return profile.equals(userHasResource)})) { %>
-        <% //Favorite resource button %>
-          <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/addToCollection?_method=PATCH" class="patch-resource" method="POST">
-            <button type="submit" class="btn btn-lg btn-info">Favorite</button> 
+        <h4 class="card-text"><%= resource.resourceDescription %></h4>
+        <p class="card-title"><%= resource.resourceType %></p>
+          <% if (!resource.collectedBy.some(function(profile){return profile.equals(userHasResource)})) { %>
+          <% //Favorite resource button %>
+            <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/addToCollection?_method=PATCH" class="patch-resource" method="POST">
+              <button type="submit" class="btn btn-lg btn-info">Favorite</button> 
+            </form>
+          <% } else { %>
+            <% //Unfavorite resource button %>
+            <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/removeFromCollection?_method=PATCH" class="patch-resource" method="POST">
+              <button type="submit" class="btn btn-lg btn-warning">Unfavorite</button> 
+            </form>
+          <% } %> 
+          <% //Delete resource button %>
+          <% if (user.profile._id.toString() == resource.resourceCreatedBy) { %>
+          <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=DELETE" class="delete-resource" method="POST">
+            <button type="submit" class="btn btn-lg btn-danger">Delete</button>
           </form>
-        <% } else { %>
-          <% //Unfavorite resource button %>
-          <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/removeFromCollection?_method=PATCH" class="patch-resource" method="POST">
-            <button type="submit" class="btn btn-lg btn-warning">Unfavorite</button> 
-          </form>
-        <% } %> 
-        <% //Delete resource button %>
-        <% if (user.profile._id.toString() == resource.resourceCreatedBy) { %>
-        <form action="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>?_method=DELETE" class="delete-resource" method="POST">
-          <button type="submit" class="btn btn-lg btn-danger">Delete</button>
-        </form>
-        <% } %>
-        <% //Edit resource button %>
-        <% if (user.profile._id.toString() == resource.resourceCreatedBy) { %>
-        <a href="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/edit"><button type="submit" class="btn btn-lg btn-success">Edit Resource</button></a>
-        <% } %>
+          <% } %>
+          <% //Edit resource button %>
+          <% if (user.profile._id.toString() == resource.resourceCreatedBy) { %>
+          <a href="/languages/<%= language._id %>/resources/<%= resource.resourceType %>/<%= resource._id %>/edit"><button type="submit" class="btn btn-lg btn-success">Edit Resource</button></a>
+          <% } %>
+        </div>
       </div>
-    </div>
-  </div>
   <% }) %>
-  <a style="font-size: 20px; margin: 0 0 10px 15px;" href="/languages">Go Back</a>
+</div>
+<a style="font-size: 20px; margin: 0 0 10px 15px;" href="/languages">Go Back</a>
 </main>
 <%- include('../partials/footer') %>

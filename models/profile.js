@@ -9,8 +9,7 @@ const profileSchema = new mongoose.Schema({
   languagesLearning: [{type: Schema.Types.ObjectId, ref: 'Language'}],
   flashcardCreatedBy: [{type: Schema.Types.ObjectId, ref: 'Flashcard'}],
   collectedResources: [{type: Schema.Types.ObjectId, ref: 'Resource'}],
-  flashcardReviews: {type: Number, min: 0}
-
+  flashcardReviews: {type: Number, min: 0},
 }, {
   timestamps: true
 })

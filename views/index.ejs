@@ -7,7 +7,7 @@
   <div class="latestResources">
     <% resources.forEach(resource => { %>
       <div class="card text-dark bg-light mb-3" style="max-width: 20rem;">
-        <div class="card-header"><a href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
+        <div class="card-header"><a target="_blank" rel="noopener noreferrer" href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
         <div class="card-body">
           <h4 class="card-text"><%= resource.resourceDescription %></h4>
           <p class="card-title"><i><%= resource.associatedLanguage %> - <%= resource.resourceType %></i></p>

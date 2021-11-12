@@ -2,7 +2,7 @@
 
 <h1>Description:</h1>
 
-- This is a web browser-based game of dominoes versus a computer.</br></br>
+- Welcome to Lingua! Lingua is a repository of FREE language learning resources for all language learners. Login using Google Oauth and get started on your language learning journey today! With Lingua you can: (1) Create your own profile, (2) View our extensive repository of FREE language learning resources, (3) Save your favorite resources to your profile for easy access, (4) Create, edit, and delete your own resources from the repository.</br></br>
   
 <h1>Getting Started:</h1>
 
@@ -15,18 +15,27 @@ Click [here](https://sei-lingua-app.herokuapp.com/) to access the latest growing
 
 <h1>Screenshots:</h1>
 
-- Below is the initial wireframe for the dominoes game:</br>
+- Below is an example wireframe for the website:</br>
   ![Wireframe](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/Dominos%20-%20Window@2x.png)</br>
 
-- Below is a screenshot of the game upon loading:</br>
+- Below is a screenshot of the webite upon logging in:</br>
   ![Initial Game](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/empty%20game%20board.png)</br>
 
-- Below is a screenshot of the game in play:</br>
+- Below is a screenshot of the user's profile page:</br>
+  ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
+
+- Below is a screenshot of the "Browse Language"page:</br>
+  ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
+
+- Below is a screenshot of the "Add New Resource" page:</br>
   ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
 
 <h1>User Stories</h1>
-
-
+- AAU, I want to be able to click "Home" so that I can return to the landing page, click "Profile" so that I can view my own profile and to click "Browse Languages" so that I can view an index of all languages.</br>
+- AAU, I want to add, delete, and/or edit the languages I am currently learning so that I can get access to the resources for that language.</br>
+- AAU, I want to add new languages to the "Browse Languages" index page so that I can start collecting and viewing resources for that language.</br>
+- AAU, I want to view the resources under the languages I'm learning so that I can like/favorite certain resources.</br>
+- AAU, I want to add new resources to the languages that I am learning, including name, resource link, resource description, and an image (if possible) so that I can share them with the community.</br></br>
 
 <h1>Technologies Used:</h1>
 
@@ -36,13 +45,16 @@ Click [here](https://sei-lingua-app.herokuapp.com/) to access the latest growing
 * Git </br>
 * Node.js
 * MongoDB</br>
-* Google Oauth
-* Mongoose
-* EJS/Express</br></br>
+* Google Oauth</br>
+* Mongoose</br>
+* EJS/Express</br>
+* Heroku</br></br>
 
 <h1>Next Steps:</h1>
 
-* Update the CSS to have the dominoes wrap around the board </br>
-* Calculate and keep track of the score for both the computer and player </br>
-* Update and clean up JavaScript code to use objects instead of arrays </br>
-* Get the "Restart Game" button to work</br>
+* Add functionality for users to add and review flashcards on their profile </br>
+* Add Scoreboard functionality to track users with the most reviews for each day </br>
+* Clean up CSS on "Browse Languages" page to have the languages on the left side of the page and the input field on the right side of the page </br>
+* Add functionality to update Profile bio </br>
+* Add images to each resource </br>
+* Get delete button inline with language headers </br>

@@ -49,7 +49,19 @@ function showFavorites(req,res){
   })
 }
 
+function update(req,res){
+  Profile.findByIdAndUpdate(req.params.id, req.body)
+  .then(profile => {
+    res.redirect(`/profiles/${profile._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export{
   show,
-  showFavorites
+  showFavorites,
+  update
 }

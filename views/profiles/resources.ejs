@@ -1,10 +1,11 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 <main class="main-body">
+  <h1 style="font-size:50px; text-align:center; margin: 10px 0 20px 0;">Favorite Resources</h1>
   <div class="showcollectedResources">
     <% resources.forEach(resource => { %>
       <div class="card text-dark bg-light mb-3" style="max-width: 130rem;">
-        <div class="card-header"><a href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
+        <div class="card-header"><a target="_blank" rel="noopener noreferrer" href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
         <div class="card-body">
           <h4 class="card-text"><%= resource.resourceDescription %></h4>
           <p class="card-title"><%= resource.resourceType %></p>
