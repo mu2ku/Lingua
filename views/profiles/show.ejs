@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<script src="/javascript/onClick.js"></script>
 <%- include('../partials/nav') %>
 <main class="main-body">
   <div class="userInfo">
@@ -18,7 +19,7 @@
         </div>
       </div>
     <% }) %>
-    <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>/resources">Show All</a></div>
+    <div class="show-all-favorites"><a style="font-size: 20px;" href="/profiles/<%= profile._id %>/resources">Show All</a></div>
   </div>
   <!-- <h1>Flashcard Reviews</h1> -->
   <div class="flash-container">
