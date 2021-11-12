@@ -16,7 +16,7 @@ Click [here](https://sei-lingua-app.herokuapp.com/) to access the latest growing
 <h1>Screenshots:</h1>
 
 - Below is an example wireframe for the website:</br>
-  ![Wireframe](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/Dominos%20-%20Window@2x.png)</br>
+  ![Wireframe](https://github.com/mu2ku/Lingua/blob/0b912c8fdac8993945dc39a4b7159af209f6c227/assets/(1)%20Example%20Wireframe.png)</br>
 
 - Below is a screenshot of the webite upon logging in:</br>
   ![Initial Game](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/empty%20game%20board.png)</br>
