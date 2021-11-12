@@ -2,6 +2,14 @@
 <%- include('../partials/nav') %>
 <main class="main-body">
   <div class="browse-languages">
+    <div class="new-language">
+      <form class="add-language" action="/languages" method="POST"
+        <label for="languageName">Add New Language:</label><br/>
+          <input type="text" name="languageName" id="languageName"><br/>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+    
     <div class="language-list">
       <% languages.forEach((language, idx)=> { %>
         <% if (user.profile._id.toString() == language.languageCreatedBy) { %>
@@ -28,52 +36,7 @@
             </div>
           </div>
         </div>
-    </div>
       <% }) %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- <ul>
-        <% languages.forEach((language)=> { %>
-        <li><%= language.languageName %>
-        <% if (user.profile._id.toString() == language.languageCreatedBy) { %>
-          <form action="/languages/<%= language._id %>?_method=DELETE" method="POST">
-            <button type="submit" class="btn btn-lg btn-danger delete-lang">X</button>
-          </form> 
-        <% } %>
-            <ul>
-              <a href="/languages/<%= language._id %>/resources/Dictionary"><li id="<%= language.languageName %>_dictionary" class="link">Dictionary</li></a>
-              <a href="/languages/<%= language._id %>/resources/Grammar"><li id="<%= language.languageName %>_grammar" class="link">Grammar</li></a>
-              <a href="/languages/<%= language._id %>/resources/Reading"><li id="<%= language.languageName %>_reading" class="link">Reading</li></a>
-              <a href="/languages/<%= language._id %>/resources/Writing"><li id="<%= language.languageName %>_writing" class="link">Writing</li></a>
-              <a href="/languages/<%= language._id %>/resources/Speaking"><li id="<%= language.languageName %>_speaking" class="link">Speaking</li></a>
-              <a href="/languages/<%= language._id %>/resources/Listening"><li id="<%= language.languageName %>_listening" class="link">Listening</li></a>
-            </ul>
-          </li>
-        <% }) %>
-      </ul>
-    </div> -->
-
-    <div class="new-language">
-      <form class="add-language" action="/languages" method="POST"
-        <label for="languageName">Add New Language:</label><br/>
-          <input type="text" name="languageName" id="languageName"><br/>
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-      </form>
-    </div>
+  </div>
 </main>
 <%- include('../partials/footer') %>
