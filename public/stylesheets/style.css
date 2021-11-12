@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color:white;
+  background-color: #565264;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -30,15 +30,16 @@ body {
 }
 
 footer {
-  background-color: lavender;
+  background-color: #A8DCD9;
   grid-column: 1/11;
   grid-row: 11/11;
   display: flex;
   justify-content: center;
+  font-family: 'Special Elite', cursive;
 }
 
 nav {
-  background-color:lavender;
+  background-color: #A8DCD9;
   grid-column: 1/11;
   grid-row: 1/2;
   display:flex;
@@ -52,7 +53,9 @@ nav {
 #website-name{
   display: flex;
   align-self: center;
-  font-size: 50px;
+  font-size: 60px;
+  font-family: 'Special Elite', cursive;
+  margin: 0 0 0 10px;
 }
 
 .logout-btn {
@@ -66,6 +69,7 @@ nav {
 
 .nav-links > * {
   padding: 30px;
+  font-family: 'Special Elite', cursive;
 }
 
 .main-body{
@@ -73,38 +77,44 @@ nav {
   grid-row: 2/11;
   margin: 20px;
   display: grid;
+  background-color: #C58882;
+  font-family: 'Special Elite', cursive;
 }
 
 .main-body > h1 {
   max-height: 40px;
+  margin: 15px 0 0 20px;
 }
 
 p {
   font-size: 12px;
 }
 
-.profile-body {
-  display:flex;
+.new-language {
+  display: inline-block;
+  font-size: 20px;
+  grid-column: 6/7;
+  margin: 25px 0;
 }
 
-.new-language{
-  display:inline-flex;
-  justify-content: flex-end;
-  font-size:20px;
-  margin: 0 100px;
-}
-
-.language-list {
-  display:inline-flex;
+.browse-languages {
+  display: inline-block;
   flex-direction: column;
-  font-size: 30px;
-  margin: 10px 50px;
+  width: 40%;
+  height: 100%;
+  grid-column: 1/5;
+  font-size: 20px;
+  width: 100%;
+}
+
+.delete-lang {
+  margin: 10px;
 }
 
 .new-resource > form {
   display:inline-flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   width: 50%;
   font-size: 20px;
 }
@@ -138,6 +148,10 @@ input, label, option, .new-r-btn {
   display: inline;
 }
 
+.showcollectedResources {
+  margin: 5px 10px;
+}
+
 .latestResources {
   display: flex;
   flex-direction: row;
@@ -158,8 +172,15 @@ input, label, option, .new-r-btn {
 }
 
 .scoreboard > img {
+  margin: -60px 30px 0 30px;
+}
+
+.scoreboard > .trophy {
+  width: 5%;
+}
+
+.scoreboard > .placeholder {
   width: 13%;
-  margin: -60px 20px 0 20px;
 }
 
 .home-page {
