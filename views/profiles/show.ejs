@@ -18,13 +18,20 @@
         </div>
       </div>
     <% }) %>
+    <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>/resources">Show All</a></div>
   </div>
-  <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>/resources">Show All</a></div>
   <!-- <h1>Flashcard Reviews</h1> -->
-  <article class="flashcards">
-    <section class="flashcard">
-      <p>Test</p>
-    </section>
-  </article>
+  <div class="flash-container">
+    <article class="flashcards">
+      <section class="flashcard">
+        <p>Test</p>
+      </section>
+    </article>
+    <div class="flashcard-buttons">
+      <button type="submit">Next Card</button><br/>
+      <button type="submit">Show Answer</button><br/>
+      <button type="submit">Add New Cards</button>
+    </div>
+  </div>
 </main>
 <%- include('../partials/footer') %>

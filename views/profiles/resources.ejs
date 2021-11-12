@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 <main class="main-body">
-  <div class="collectedResources">
+  <div class="showcollectedResources">
     <% resources.forEach(resource => { %>
       <div class="card text-dark bg-light mb-3" style="max-width: 150rem;">
         <div class="card-header"><a href="<%= resource.resourceLink %>"><h2><%= resource.resourceName %></h2></a></div>
@@ -12,6 +12,6 @@
       </div>
     <% }) %>
   </div>
-  <div class="show-all-favorites"><a href="/profiles/<%= profile._id %>">Go Back</a></div>
+  <div class="show-all-favorites"><a style="font-size: 20px;" href="/profiles/<%= profile._id %>">Go Back</a></div>
 </main>
 <%- include('../partials/footer') %>
