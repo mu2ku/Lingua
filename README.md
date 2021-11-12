@@ -16,19 +16,19 @@ Click [here](https://sei-lingua-app.herokuapp.com/) to access the latest growing
 <h1>Screenshots:</h1>
 
 - Below is an example wireframe for the website:</br>
-  ![Wireframe](https://github.com/mu2ku/Lingua/blob/0b912c8fdac8993945dc39a4b7159af209f6c227/assets/(1)%20Example%20Wireframe.png)</br>
+  ![Wireframe](https://github.com/mu2ku/Lingua/blob/2ac5a70a14acefca05b03cce6429233e8fffbd66/assets/1%20Example%20Wireframe.png)</br>
 
 - Below is a screenshot of the webite upon logging in:</br>
-  ![Initial Game](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/empty%20game%20board.png)</br>
+  ![Home](https://github.com/mu2ku/Lingua/blob/2ac5a70a14acefca05b03cce6429233e8fffbd66/assets/2%20Home.png)</br>
 
 - Below is a screenshot of the user's profile page:</br>
-  ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
+  ![Profile](https://github.com/mu2ku/Lingua/blob/2ac5a70a14acefca05b03cce6429233e8fffbd66/assets/3%20Profile.png)</br></br>
 
 - Below is a screenshot of the "Browse Language"page:</br>
-  ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
+  ![Browse Languages](https://github.com/mu2ku/Lingua/blob/2ac5a70a14acefca05b03cce6429233e8fffbd66/assets/4%20Browse%20Languages.png)</br></br>
 
 - Below is a screenshot of the "Add New Resource" page:</br>
-  ![Game in play](https://github.com/mu2ku/Dominos/blob/0d61d7f2814717702b5a44cc5f03e01eec3c8ee0/assets/game%20board%20in%20play.png)</br></br>
+  ![Add Resource](https://github.com/mu2ku/Lingua/blob/2ac5a70a14acefca05b03cce6429233e8fffbd66/assets/5%20Add%20New%20Resource.png)</br></br>
 
 <h1>User Stories</h1>
 - AAU, I want to be able to click "Home" so that I can return to the landing page, click "Profile" so that I can view my own profile and to click "Browse Languages" so that I can view an index of all languages.</br>
