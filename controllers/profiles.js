@@ -1,6 +1,5 @@
 import { Profile } from "../models/profile.js"
 import { Resource } from "../models/resource.js"
-import { Flashcard } from "../models/flashcard.js"
 
 function show(req,res){
   Profile.findById(req.params.id)
