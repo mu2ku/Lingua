@@ -6,6 +6,9 @@ router.get('/:id', isLoggedIn, profilesCtrl.show)
 router.get('/:id/resources', isLoggedIn, profilesCtrl.showFavorites)
 router.put('/:id', isLoggedIn, profilesCtrl.update)
 
+router.get('/:id/flashcards/new', isLoggedIn, profilesCtrl.new)
+router.post('/:id/flashcards',isLoggedIn, profilesCtrl.createFlashcard)
+
 export {
   router
 }

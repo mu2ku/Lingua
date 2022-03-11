@@ -1,5 +1,6 @@
 import { Profile } from "../models/profile.js"
 import { Resource } from "../models/resource.js"
+import { Flashcard } from "../models/flashcard.js"
 
 function show(req,res){
   Profile.findById(req.params.id)
@@ -60,8 +61,29 @@ function update(req,res){
   })
 }
 
+function newFlashcard(req,res){
+  res.render('flashcards/new', {
+    title: 'Add new flashcard',
+    user: req.user ? req.user : null
+  })
+}
+
+function createFlashcard(req,res){
+  Profile.findById(req.params.id)
+  .then(profile => {
+    profile.flashcardCreatedBy.push(req.body)
+    profile.save()
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export{
   show,
   showFavorites,
-  update
+  update,
+  newFlashcard as new,
+  createFlashcard
 }
