@@ -3,7 +3,7 @@
 <main class="main-body">
   <div class="new-flashcard">
     <h1>Add new flashcard</h1>
-    <form action="/flashcards" method="POST">
+    <form action="/profiles/<%= profile._id %>/flashcards" method="POST">
       <input type="text" name="flashcardLanguage" placeholder="Language"> 
       <input type="text" name="flashcardFront" placeholder="Question"> 
       <input type="text" name="flashcardBack" placeholder="Answer"> 

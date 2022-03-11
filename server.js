@@ -21,7 +21,6 @@ import('./config/passport.js')
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as profileRouter } from './routes/profiles.js'
-import { router as flashcardRouter } from './routes/flashcards.js'
 import { router as langRouter } from './routes/languages.js'
 import { router as resourceRouter } from './routes/resources.js'
 
@@ -62,7 +61,6 @@ app.use(passport.session())
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
-app.use('/flashcards', flashcardRouter)
 app.use('/profiles', profileRouter)
 app.use('/languages', langRouter)
 app.use('/resources', resourceRouter)

@@ -62,17 +62,25 @@ function update(req,res){
 }
 
 function newFlashcard(req,res){
-  res.render('flashcards/new', {
-    title: 'Add new flashcard',
-    user: req.user ? req.user : null
+  Profile.findById(req.params.id)
+  .then(profile =>{
+    res.render('flashcards/new', {
+      title: 'Add new flashcard',
+      profile,
+      user: req.user ? req.user : null
+    })
   })
 }
 
 function createFlashcard(req,res){
   Profile.findById(req.params.id)
   .then(profile => {
+    console.log(req.body)
     profile.flashcardCreatedBy.push(req.body)
     profile.save()
+    .then(()=>{
+      res.redirect('back')
+    })
   })
   .catch(err => {
     console.log(err)
