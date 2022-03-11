@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<main class="main-body">
+  <div class="new-flashcard">
+    <h1>Add new flashcard</h1>
+    <form action="/flashcards" method="POST">
+      <input type="text" name="flashcardLanguage" placeholder="Language"> 
+      <input type="text" name="flashcardFront" placeholder="Question"> 
+      <input type="text" name="flashcardBack" placeholder="Answer"> 
+      <button type="submit" class="new-r-btn btn btn-primary btn-lg">Submit</button>
+      </form>
+  </div>
+</main>
+<%- include('../partials/footer') %>
