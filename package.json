@@ -1,14 +1,10 @@
 {
-  "homepage": "http://mu2ku.github.io/Lingua",
   "name": "men_template",
   "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build"
+    "start": "node ./bin/www.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
