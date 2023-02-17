@@ -7,10 +7,10 @@
     <h1><%= profile.name %></h1>
     <h1><%= user.email %></h1>
     <!-- <p><%= profile.bio %></p> -->
-    <input type="text" id="bio" name="bio" placeholder="Profile Bio">
+    <!-- <input type="text" id="bio" name="bio" placeholder="Profile Bio">
     <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
       <button type="submit" class="btn btn-info">Edit Profile Bio</button>
-    </form>
+    </form> -->
   </div>
   <!-- <h1>Resources Liked:</h1> -->
   <div class="collectedResources">
@@ -26,7 +26,7 @@
     <div class="show-all-favorites"><a style="font-size: 20px;" href="/profiles/<%= profile._id %>/resources">Show All</a></div>
   </div>
   <!-- <h1>Flashcard Reviews</h1> -->
-  <div class="flash-container">
+  <!-- <div class="flash-container">
     <article class="flashcards">
       <section class="flashcard">
         <p>Front of Card</p>
@@ -37,6 +37,6 @@
       <button type="submit">Show Answer</button><br/>
       <a href="/profiles/<%= profile._id %>/flashcards/new"><button type="submit">Add New Cards</button></a>
     </div>
-  </div>
+  </div> -->
 </main>
 <%- include('../partials/footer') %>
